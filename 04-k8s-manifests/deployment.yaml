@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intent-classifier
+  namespace: intent-namespace
+  labels:
+    app: intent-classifier
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: intent-classifier
+  template:
+    metadata:
+      labels:
+        app: intent-classifier
+    spec:
+      containers:
+        - name: intent-classifier
+          image: <image-name>
+          ports:
+            - containerPort: 6000
