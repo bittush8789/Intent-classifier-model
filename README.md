@@ -15,6 +15,7 @@ This small project demonstrates:
     python model/train.py
     This will create `model/artifacts/intent_model.pkl`.
 
+
 3. Run the API:
     python app.py
     The API will be available at http://127.0.0.1:6000
